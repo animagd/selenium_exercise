@@ -45,5 +45,5 @@ class FirsRequestTest(unittest.TestCase):
         except:
             print "Alert not accepted"
 
-    # def tearDown(self):
-    #     self.browser.stop()
+        # def tearDown(self):
+        #     self.browser.stop()
