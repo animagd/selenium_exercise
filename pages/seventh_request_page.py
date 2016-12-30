@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common import keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+
 from pages.abstract_page import AbstractPage
 
 
@@ -24,10 +26,12 @@ class SeventhRequestPage(AbstractPage):
         else:
             input_element.send_keys(number)
 
-
         move_to_place = ActionChains(self.driver).click_and_hold(product).move_to_element(place_to_drop).release(place_to_drop)
         move_to_place.perform()
-        # WebDriverWait(self.driver, 10).until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, "button[data-add-to-basket]"))).click()
+
+    def delete_product(self):
+        delete_button_path = "//*[@class = 'panel-body']//*[@class = 'btn btn-sm']"
+        WebDriverWait(self.driver, 1).until(expected_conditions.element_to_be_clickable((By.XPATH, delete_button_path))).click()
 
     def take_score(self):
         return self.driver.find_element_by_css_selector(".summary-quantity").text

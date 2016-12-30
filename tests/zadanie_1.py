@@ -2,12 +2,11 @@
 
 import unittest
 
-
 from browser import Browser
 from pages.index_page import IndexPage
 
 
-class FirsRequestTest(unittest.TestCase):
+class FirstRequestTest(unittest.TestCase):
     def setUp(self):
         self.browser = Browser()
         self.driver = self.browser.start()
