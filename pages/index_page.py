@@ -4,6 +4,7 @@ from pages.abstract_page import AbstractPage
 from pages.first_request_page import FirstRequestPage
 from pages.second_request_page import SecondRequestPage
 from pages.seventh_request_page import SeventhRequestPage
+from pages.tenth_request_page import TenthRequestPage
 
 
 class IndexPage(AbstractPage):
@@ -21,3 +22,7 @@ class IndexPage(AbstractPage):
     def open_seventh_request_page(self):
         self.driver.find_element_by_css_selector("[href = '/task_7']").click()
         return SeventhRequestPage(self.driver)
+
+    def open_tenth_request_page(self):
+        self.driver.find_element_by_css_selector("[href = '/task_10']").click()
+        return TenthRequestPage(self.driver)
