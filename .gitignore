@@ -1,0 +1,3 @@
+*.pyc
+pages/*.pyc
+tests/*.pyc
