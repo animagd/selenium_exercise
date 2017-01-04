@@ -9,7 +9,7 @@ class Browser:
         self.profile = None
 
     def start(self):
-        self.driver = webdriver.Chrome('C:/python/chromedriver.exe')
+        self.driver = webdriver.Chrome()#'C:/python/chromedriver.exe')
         self.driver.get("https://testingcup.pgs-soft.com/")
         self.driver.maximize_window()
         return self.driver
