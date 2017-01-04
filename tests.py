@@ -25,7 +25,7 @@ def fake_description():
 
 
 if __name__ == '__main__':
-    logging.basicConfig(filename='myapp.log', level=logging.INFO)
+    logging.basicConfig(filename='myapp.log', level=logging.INFO,format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
     logging.info('Started')
 
     # Create the report file
