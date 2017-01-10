@@ -40,9 +40,9 @@ class FirstRequestTest(unittest.TestCase):
         try:
             alert = self.driver.switch_to_alert()
             alert.accept()
-            print "Alert accepted"
+            print ("Alert accepted")
         except:
-            print "Alert not accepted"
+            print ("Alert not accepted")
 
     def tearDown(self):
         self.browser.stop()
